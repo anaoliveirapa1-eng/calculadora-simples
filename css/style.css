@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'Segmentada';
+    src: url('../fonts/sevenseg.woff2') format('woff2');
+
+}
+
+body {
+    background-image: linear-gradient(#ffe6ec, #ffc1d6);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 1rem;
+    background-color: #303030;
+    border-radius: 1rem;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(6, 4rem);
+    gap: .5rem;
+
+    button {
+        border-radius: .5rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: inset 0px 0px 4px #ffffff;
+        background-color: #ececec;
+        font-size: 1.25rem;
+
+        &:active {
+            box-shadow: 2px 2px 4px #000000d9 inset;
+            padding: 2px 0 0 2px;
+        }
+    }
+
+    .ac {
+        grid-column: span 2;
+        background-color: #dc143c;
+        color: ghostwhite;
+    }
+
+    .equal {
+        grid-column: span 2;
+        background-color: #d17a4a;
+    }
+
+    input {
+        grid-column: span 4;
+        padding-right: 8px;
+        text-align: right;
+        background-color: #e2d6ff;
+        border: none;
+        border-radius: 8px;
+        font-family: "Segmentada", sans-serif;
+        font-size: 2rem;
+        color: #545454;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
